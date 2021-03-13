@@ -48,5 +48,16 @@ namespace Registrationtest
             //Assert
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void Given_Password_WhenValidate_ShouldReturn_True()
+        {
+            //Arrange
+
+            string Password = "Sumitrana@12";
+            //Act
+            bool result = person.ValidatePassword(Password);
+            //Assert
+            Assert.IsTrue(result);
+        }
     }
 }
