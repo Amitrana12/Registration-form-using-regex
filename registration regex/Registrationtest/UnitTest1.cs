@@ -21,5 +21,14 @@ namespace Registrationtest
             //Assert
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void GivenUser_LastName_WhenValidate_ShouldReturn_True()
+        {
+            string LastName = "Rana";
+            //Act
+            bool result = person.ValidateFirstName(LastName);
+            //Assert
+            Assert.IsTrue(result);
+        }
     }
 }
