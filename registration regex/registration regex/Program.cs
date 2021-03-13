@@ -20,6 +20,9 @@ namespace registration_regex
             Console.WriteLine("Enter Your Mobile Number::-");
             string MobileNumber = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidateMobile(MobileNumber));
+            Console.WriteLine("Enter Your Password");
+            string Password = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidatePassword(Password));
         }
     }
 }
