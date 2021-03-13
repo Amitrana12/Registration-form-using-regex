@@ -30,5 +30,14 @@ namespace Registrationtest
             //Assert
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void Given_EmailId_WhenValidate_ShouldReturn_True()
+        {
+            string Email = "amirana14325@gmail.com";
+            //Act
+            bool result = person.ValidateEmail(Email);
+            //Assert
+            Assert.IsTrue(result);
+        }
     }
 }
