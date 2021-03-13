@@ -39,5 +39,14 @@ namespace Registrationtest
             //Assert
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void Given_MobileNumber_WhenValidate_ShouldReturn_True()
+        {
+            string MobileNumber = "91 8978325434";
+            //Act
+            bool result = person.ValidateMobile(MobileNumber);
+            //Assert
+            Assert.IsTrue(result);
+        }
     }
 }
