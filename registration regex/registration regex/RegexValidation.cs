@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace registration_regex
 {
-    class RegexValidation
+    public class RegexValidation
     {
         public const string Regex_FirstName = "^[A-Z]{1}[A-Za-z]{2,}$";
         public const string Regex_LastName = "^[A-Z]{1}[A-Za-z]{2,}$";
