@@ -12,7 +12,20 @@ namespace registration_regex
         public const string Regex_Email = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
         public const string Regex_MobileNumber = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";        
         public const string Regex_Password = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
-        public bool ValidateFirstName(string FirstName)
+
+
+        public bool ValidateFirstName(string firstName) => (Regex.IsMatch(firstName, Regex_FirstName));
+
+        public bool ValidateLastName(string lastName) => (Regex.IsMatch(lastName, Regex_LastName));
+
+        public bool ValidateEmail(string email) => (Regex.IsMatch(email, Regex_Email));
+
+        public bool ValidateMobile(string mobNumber) => (Regex.IsMatch(mobNumber, Regex_MobileNumber));
+
+        public bool ValidatePassword(string password) => (Regex.IsMatch(password, Regex_Password));
+
+
+        /*public bool ValidateFirstName(string FirstName)
         {
             try
             {
@@ -89,6 +102,6 @@ namespace registration_regex
                 Console.WriteLine(ex.Message);
                 return false;
             }
-        }
+        }*/
     }
 }
